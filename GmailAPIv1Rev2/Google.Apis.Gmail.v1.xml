@@ -1,0 +1,1773 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Google.Apis.Gmail.v1</name>
+    </assembly>
+    <members>
+        <member name="T:Google.Apis.Gmail.v1.Data.Draft">
+            <summary>A draft email in the user's mailbox.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Draft.Id">
+            <summary>The immutable ID of the draft.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Draft.Message">
+            <summary>The message content of the draft.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Draft.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.Data.History">
+            <summary>A record of a change to the user's mailbox. Each history contains a list of the messages that were
+            affected by this change.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.History.Id">
+            <summary>The mailbox sequence ID.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.History.Messages">
+            <summary>The messages that changed in this history record.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.History.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.Data.Label">
+            <summary>Labels are used to categorize messages and threads within the user's mailbox.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Label.Id">
+            <summary>The immutable ID of the label.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Label.LabelListVisibility">
+            <summary>The visibility of the label in the label list in the Gmail web interface.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Label.MessageListVisibility">
+            <summary>The visibility of the label in the message list in the Gmail web interface.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Label.Name">
+            <summary>The display name of the label.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Label.Type">
+            <summary>The owner type for the label. User labels are created by the user and can be modified and deleted
+            by the user and can be applied to any message or thread. System labels are internally created and cannot be
+            added, modified, or deleted. System labels may be able to be applied to or removed from messages and threads
+            under some circumstances but this is not guaranteed. For example, users can apply and remove the INBOX and
+            UNREAD labels from messages and threads, but cannot apply or remove the DRAFTS or SENT labels from messages
+            or threads.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Label.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListDraftsResponse.Drafts">
+            <summary>List of drafts.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListDraftsResponse.NextPageToken">
+            <summary>Token to retrieve the next page of results in the list.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListDraftsResponse.ResultSizeEstimate">
+            <summary>Estimated total number of results.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListDraftsResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListHistoryResponse.History">
+            <summary>List of history records.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListHistoryResponse.HistoryId">
+            <summary>The ID of the mailbox's current history record.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListHistoryResponse.NextPageToken">
+            <summary>Page token to retrieve the next page of results in the list.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListHistoryResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListLabelsResponse.Labels">
+            <summary>List of labels.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListLabelsResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListMessagesResponse.Messages">
+            <summary>List of messages.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListMessagesResponse.NextPageToken">
+            <summary>Token to retrieve the next page of results in the list.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListMessagesResponse.ResultSizeEstimate">
+            <summary>Estimated total number of results.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListMessagesResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListThreadsResponse.NextPageToken">
+            <summary>Page token to retrieve the next page of results in the list.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListThreadsResponse.ResultSizeEstimate">
+            <summary>Estimated total number of results.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListThreadsResponse.Threads">
+            <summary>List of threads.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ListThreadsResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.Data.Message">
+            <summary>An email message.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Message.HistoryId">
+            <summary>The ID of the last history record that modified this message.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Message.Id">
+            <summary>The immutable ID of the message.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Message.LabelIds">
+            <summary>List of IDs of labels applied to this message.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Message.Payload">
+            <summary>The parsed email structure in the message parts.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Message.Raw">
+            <summary>The entire email message in an RFC 2822 formatted string. Returned in messages.get and drafts.get
+            responses when the format=RAW parameter is supplied.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Message.SizeEstimate">
+            <summary>Estimated size in bytes of the message.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Message.Snippet">
+            <summary>A short part of the message text.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Message.ThreadId">
+            <summary>The ID of the thread the message belongs to. To add a message or draft to a thread, the following
+            criteria must be met: - The requested threadId must be specified on the Message or Draft.Message you supply
+            with your request. - The References and In-Reply-To headers must be set in compliance with the </summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Message.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.Data.MessagePart">
+            <summary>A single MIME message part.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.MessagePart.Body">
+            <summary>The message part body for this part, which may be empty for container MIME message parts.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.MessagePart.Filename">
+            <summary>The filename of the attachment. Only present if this message part represents an
+            attachment.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.MessagePart.Headers">
+            <summary>List of headers on this message part. For the top-level message part, representing the entire
+            message payload, it will contain the standard RFC 2822 email headers such as To, From, and
+            Subject.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.MessagePart.MimeType">
+            <summary>The MIME type of the message part.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.MessagePart.PartId">
+            <summary>The immutable ID of the message part.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.MessagePart.Parts">
+            <summary>The child MIME message parts of this part. This only applies to container MIME message parts, for
+            example multipart. For non- container MIME message part types, such as text/plain, this field is empty. For
+            more information, see RFC 1521.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.MessagePart.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.Data.MessagePartBody">
+            <summary>The body of a single MIME message part.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.MessagePartBody.AttachmentId">
+            <summary>When present, contains the ID of an external attachment that can be retrieved in a separate
+            messages.attachments.get request. When not present, the entire content of the message part body is contained
+            in the data field.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.MessagePartBody.Data">
+            <summary>The body data of a MIME message part. May be empty for MIME container types that have no message
+            body or when the body data is sent as a separate attachment. An attachment ID is present if the body data is
+            contained in a separate attachment.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.MessagePartBody.Size">
+            <summary>Total number of bytes in the body of the message part.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.MessagePartBody.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.MessagePartHeader.Name">
+            <summary>The name of the header before the : separator. For example, To.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.MessagePartHeader.Value">
+            <summary>The value of the header after the : separator. For example, someuser@example.com.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.MessagePartHeader.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ModifyMessageRequest.AddLabelIds">
+            <summary>A list of IDs of labels to add to this message.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ModifyMessageRequest.RemoveLabelIds">
+            <summary>A list IDs of labels to remove from this message.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ModifyMessageRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ModifyThreadRequest.AddLabelIds">
+            <summary>A list of IDs of labels to add to this thread.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ModifyThreadRequest.RemoveLabelIds">
+            <summary>A list of IDs of labels to remove from this thread.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.ModifyThreadRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.Data.Thread">
+            <summary>A collection of messages representing a conversation.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Thread.HistoryId">
+            <summary>The ID of the last history record that modified this thread.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Thread.Id">
+            <summary>The unique ID of the thread.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Thread.Messages">
+            <summary>The list of messages in the thread.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Thread.Snippet">
+            <summary>A short part of the message text.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.Data.Thread.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.GmailService">
+            <summary>The Gmail Service.</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.GmailService.Version">
+            <summary>The API version.</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.GmailService.DiscoveryVersionUsed">
+            <summary>The discovery version used to generate this service.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.GmailService.#ctor">
+            <summary>Constructs a new service.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.GmailService.#ctor(Google.Apis.Services.BaseClientService.Initializer)">
+            <summary>Constructs a new service.</summary>
+            <param name="initializer">The service initializer.</param>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.GmailService.Features">
+            <summary>Gets the service supported features.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.GmailService.Name">
+            <summary>Gets the service name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.GmailService.BaseUri">
+            <summary>Gets the service base URI.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.GmailService.BasePath">
+            <summary>Gets the service base path.</summary>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.GmailService.Scope">
+            <summary>Available OAuth 2.0 scopes for use with the Gmail API.</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.GmailService.Scope.MailGoogleCom">
+            <summary>View and manage your mail</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.GmailService.Scope.GmailCompose">
+            <summary>Manage drafts and send emails</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.GmailService.Scope.GmailModify">
+            <summary>View and modify but not delete your email</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.GmailService.Scope.GmailReadonly">
+            <summary>View your emails messages and settings</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.GmailService.Users">
+            <summary>Gets the Users resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.GmailBaseServiceRequest`1">
+            <summary>A base abstract class for Gmail requests.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.GmailBaseServiceRequest`1.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new GmailBaseServiceRequest instance.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.GmailBaseServiceRequest`1.Alt">
+            <summary>Data format for the response.</summary>
+            [default: json]
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.GmailBaseServiceRequest`1.AltEnum">
+            <summary>Data format for the response.</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.GmailBaseServiceRequest`1.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.GmailBaseServiceRequest`1.Fields">
+            <summary>Selector specifying which fields to include in a partial response.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.GmailBaseServiceRequest`1.Key">
+            <summary>API key. Your API key identifies your project and provides you with API access, quota, and reports.
+            Required unless you provide an OAuth 2.0 token.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.GmailBaseServiceRequest`1.OauthToken">
+            <summary>OAuth 2.0 token for the current user.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.GmailBaseServiceRequest`1.PrettyPrint">
+            <summary>Returns response with indentations and line breaks.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.GmailBaseServiceRequest`1.QuotaUser">
+            <summary>Available to use for quota purposes for server-side applications. Can be any arbitrary string
+            assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.GmailBaseServiceRequest`1.UserIp">
+            <summary>IP address of the site where the request originates. Use this if you want to enforce per-user
+            limits.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.GmailBaseServiceRequest`1.InitParameters">
+            <summary>Initializes Gmail parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource">
+            <summary>The "users" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.UsersResource.service">
+            <summary> The service whih this resource is belong to.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.Drafts">
+            <summary>Gets the Drafts resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.DraftsResource">
+            <summary>The "drafts" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.UsersResource.DraftsResource.service">
+            <summary> The service whih this resource is belong to.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.Create(Google.Apis.Gmail.v1.Data.Draft,System.String)">
+            <summary>Creates a new draft with the DRAFT label.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateRequest">
+            <summary>Creates a new draft with the DRAFT label.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Gmail.v1.Data.Draft,System.String)">
+            <summary>Constructs a new Create request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateRequest.InitParameters">
+            <summary>Initializes Create parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.Create(Google.Apis.Gmail.v1.Data.Draft,System.String,System.IO.Stream,System.String)">
+            <summary>Creates a new draft with the DRAFT label.</summary>/// <param name="body">The body of the request.</param>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="stream">The stream to upload.</param>
+            <param name="contentType">The content type of the stream to upload.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateMediaUpload">
+            <summary>Create media upload which supports resumable upload.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateMediaUpload.Alt">
+            <summary>Data format for the response.</summary>
+            [default: json]
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateMediaUpload.AltEnum">
+            <summary>Data format for the response.</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateMediaUpload.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateMediaUpload.Fields">
+            <summary>Selector specifying which fields to include in a partial response.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateMediaUpload.Key">
+            <summary>API key. Your API key identifies your project and provides you with API access, quota, and
+            reports. Required unless you provide an OAuth 2.0 token.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateMediaUpload.OauthToken">
+            <summary>OAuth 2.0 token for the current user.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateMediaUpload.PrettyPrint">
+            <summary>Returns response with indentations and line breaks.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateMediaUpload.QuotaUser">
+            <summary>Available to use for quota purposes for server-side applications. Can be any arbitrary
+            string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are
+            provided.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateMediaUpload.UserIp">
+            <summary>IP address of the site where the request originates. Use this if you want to enforce per-
+            user limits.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateMediaUpload.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.CreateMediaUpload.#ctor(Google.Apis.Services.IClientService,Google.Apis.Gmail.v1.Data.Draft,System.String,System.IO.Stream,System.String)">
+            <summary>Constructs a new Create media upload instance.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.Delete(System.String,System.String)">
+            <summary>Immediately and permanently deletes the specified draft. Does not simply trash it.</summary>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">The ID of the draft to delete.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.DraftsResource.DeleteRequest">
+            <summary>Immediately and permanently deletes the specified draft. Does not simply trash it.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.DeleteRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.DeleteRequest.Id">
+            <summary>The ID of the draft to delete.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.Get(System.String,System.String)">
+            <summary>Gets the specified draft.</summary>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">The ID of the draft to retrieve.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.DraftsResource.GetRequest">
+            <summary>Gets the specified draft.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.GetRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.GetRequest.Id">
+            <summary>The ID of the draft to retrieve.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.GetRequest.Format">
+            <summary>The format to return the draft in.</summary>
+            [default: full]
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.DraftsResource.GetRequest.FormatEnum">
+            <summary>The format to return the draft in.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.List(System.String)">
+            <summary>Lists the drafts in the user's mailbox.</summary>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.DraftsResource.ListRequest">
+            <summary>Lists the drafts in the user's mailbox.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.ListRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.ListRequest.PageToken">
+            <summary>Page token to retrieve a specific page of results in the list.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.ListRequest.MaxResults">
+            <summary>Maximum number of drafts to return.</summary>
+            [default: 100]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.Send(Google.Apis.Gmail.v1.Data.Draft,System.String)">
+            <summary>Sends the specified, existing draft to the recipients in the To, Cc, and Bcc headers.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendRequest">
+            <summary>Sends the specified, existing draft to the recipients in the To, Cc, and Bcc headers.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Gmail.v1.Data.Draft,System.String)">
+            <summary>Constructs a new Send request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendRequest.InitParameters">
+            <summary>Initializes Send parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.Send(Google.Apis.Gmail.v1.Data.Draft,System.String,System.IO.Stream,System.String)">
+            <summary>Sends the specified, existing draft to the recipients in the To, Cc, and Bcc headers.</summary>/// <param name="body">The body of the request.</param>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="stream">The stream to upload.</param>
+            <param name="contentType">The content type of the stream to upload.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendMediaUpload">
+            <summary>Send media upload which supports resumable upload.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendMediaUpload.Alt">
+            <summary>Data format for the response.</summary>
+            [default: json]
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendMediaUpload.AltEnum">
+            <summary>Data format for the response.</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendMediaUpload.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendMediaUpload.Fields">
+            <summary>Selector specifying which fields to include in a partial response.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendMediaUpload.Key">
+            <summary>API key. Your API key identifies your project and provides you with API access, quota, and
+            reports. Required unless you provide an OAuth 2.0 token.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendMediaUpload.OauthToken">
+            <summary>OAuth 2.0 token for the current user.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendMediaUpload.PrettyPrint">
+            <summary>Returns response with indentations and line breaks.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendMediaUpload.QuotaUser">
+            <summary>Available to use for quota purposes for server-side applications. Can be any arbitrary
+            string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are
+            provided.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendMediaUpload.UserIp">
+            <summary>IP address of the site where the request originates. Use this if you want to enforce per-
+            user limits.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendMediaUpload.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.SendMediaUpload.#ctor(Google.Apis.Services.IClientService,Google.Apis.Gmail.v1.Data.Draft,System.String,System.IO.Stream,System.String)">
+            <summary>Constructs a new Send media upload instance.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.Update(Google.Apis.Gmail.v1.Data.Draft,System.String,System.String)">
+            <summary>Replaces a draft's content.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">The ID of the draft to update.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateRequest">
+            <summary>Replaces a draft's content.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Gmail.v1.Data.Draft,System.String,System.String)">
+            <summary>Constructs a new Update request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateRequest.Id">
+            <summary>The ID of the draft to update.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateRequest.InitParameters">
+            <summary>Initializes Update parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.Update(Google.Apis.Gmail.v1.Data.Draft,System.String,System.String,System.IO.Stream,System.String)">
+            <summary>Replaces a draft's content.</summary>/// <param name="body">The body of the request.</param>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">The ID of the draft to update.</param>
+            <param name="stream">The stream to upload.</param>
+            <param name="contentType">The content type of the stream to upload.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateMediaUpload">
+            <summary>Update media upload which supports resumable upload.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateMediaUpload.Alt">
+            <summary>Data format for the response.</summary>
+            [default: json]
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateMediaUpload.AltEnum">
+            <summary>Data format for the response.</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateMediaUpload.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateMediaUpload.Fields">
+            <summary>Selector specifying which fields to include in a partial response.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateMediaUpload.Key">
+            <summary>API key. Your API key identifies your project and provides you with API access, quota, and
+            reports. Required unless you provide an OAuth 2.0 token.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateMediaUpload.OauthToken">
+            <summary>OAuth 2.0 token for the current user.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateMediaUpload.PrettyPrint">
+            <summary>Returns response with indentations and line breaks.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateMediaUpload.QuotaUser">
+            <summary>Available to use for quota purposes for server-side applications. Can be any arbitrary
+            string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are
+            provided.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateMediaUpload.UserIp">
+            <summary>IP address of the site where the request originates. Use this if you want to enforce per-
+            user limits.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateMediaUpload.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateMediaUpload.Id">
+            <summary>The ID of the draft to update.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.DraftsResource.UpdateMediaUpload.#ctor(Google.Apis.Services.IClientService,Google.Apis.Gmail.v1.Data.Draft,System.String,System.String,System.IO.Stream,System.String)">
+            <summary>Constructs a new Update media upload instance.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.History">
+            <summary>Gets the History resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.HistoryResource">
+            <summary>The "history" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.UsersResource.HistoryResource.service">
+            <summary> The service whih this resource is belong to.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.HistoryResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.HistoryResource.List(System.String)">
+            <summary>Lists the history of all changes to the given mailbox. History results are returned in
+            chronological order (increasing historyId).</summary>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.HistoryResource.ListRequest">
+            <summary>Lists the history of all changes to the given mailbox. History results are returned in
+            chronological order (increasing historyId).</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.HistoryResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.HistoryResource.ListRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.HistoryResource.ListRequest.PageToken">
+            <summary>Page token to retrieve a specific page of results in the list.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.HistoryResource.ListRequest.MaxResults">
+            <summary>The maximum number of history records to return.</summary>
+            [default: 100]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.HistoryResource.ListRequest.LabelId">
+            <summary>Only return messages with a label matching the ID.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.HistoryResource.ListRequest.StartHistoryId">
+            <summary>Required. Returns history records after the specified startHistoryId. The supplied
+            startHistoryId should be obtained from the historyId of a message, thread, or previous list
+            response. History IDs increase chronologically but are not contiguous with random gaps in between
+            valid IDs. Supplying an invalid or out of date startHistoryId typically returns an HTTP 404 error
+            code. A historyId is typically valid for at least a week, but in some circumstances may be valid for
+            only a few hours. If you receive an HTTP 404 error response, your application should perform a full
+            sync. If you receive no nextPageToken in the response, there are no updates to retrieve and you can
+            store the returned historyId for a future request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.HistoryResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.HistoryResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.HistoryResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.HistoryResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.Labels">
+            <summary>Gets the Labels resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.LabelsResource">
+            <summary>The "labels" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.UsersResource.LabelsResource.service">
+            <summary> The service whih this resource is belong to.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.Create(Google.Apis.Gmail.v1.Data.Label,System.String)">
+            <summary>Creates a new label.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.LabelsResource.CreateRequest">
+            <summary>Creates a new label.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.CreateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Gmail.v1.Data.Label,System.String)">
+            <summary>Constructs a new Create request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.CreateRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.CreateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.CreateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.CreateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.CreateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.CreateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.CreateRequest.InitParameters">
+            <summary>Initializes Create parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.Delete(System.String,System.String)">
+            <summary>Immediately and permanently deletes the specified label and removes it from any messages and
+            threads that it is applied to.</summary>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">The ID of the label to delete.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.LabelsResource.DeleteRequest">
+            <summary>Immediately and permanently deletes the specified label and removes it from any messages and
+            threads that it is applied to.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.DeleteRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.DeleteRequest.Id">
+            <summary>The ID of the label to delete.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.Get(System.String,System.String)">
+            <summary>Gets the specified label.</summary>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">The ID of the label to retrieve.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.LabelsResource.GetRequest">
+            <summary>Gets the specified label.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.GetRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.GetRequest.Id">
+            <summary>The ID of the label to retrieve.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.List(System.String)">
+            <summary>Lists all labels in the user's mailbox.</summary>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.LabelsResource.ListRequest">
+            <summary>Lists all labels in the user's mailbox.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.ListRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.Patch(Google.Apis.Gmail.v1.Data.Label,System.String,System.String)">
+            <summary>Updates the specified label. This method supports patch semantics.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">The ID of the label to update.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.LabelsResource.PatchRequest">
+            <summary>Updates the specified label. This method supports patch semantics.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Gmail.v1.Data.Label,System.String,System.String)">
+            <summary>Constructs a new Patch request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.PatchRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.PatchRequest.Id">
+            <summary>The ID of the label to update.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.PatchRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.PatchRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.PatchRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.PatchRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.PatchRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.PatchRequest.InitParameters">
+            <summary>Initializes Patch parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.Update(Google.Apis.Gmail.v1.Data.Label,System.String,System.String)">
+            <summary>Updates the specified label.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">The ID of the label to update.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.LabelsResource.UpdateRequest">
+            <summary>Updates the specified label.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Gmail.v1.Data.Label,System.String,System.String)">
+            <summary>Constructs a new Update request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.UpdateRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.UpdateRequest.Id">
+            <summary>The ID of the label to update.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.UpdateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.UpdateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.UpdateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.UpdateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.LabelsResource.UpdateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.LabelsResource.UpdateRequest.InitParameters">
+            <summary>Initializes Update parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.Messages">
+            <summary>Gets the Messages resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource">
+            <summary>The "messages" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.UsersResource.MessagesResource.service">
+            <summary> The service whih this resource is belong to.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.Attachments">
+            <summary>Gets the Attachments resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.AttachmentsResource">
+            <summary>The "attachments" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.UsersResource.MessagesResource.AttachmentsResource.service">
+            <summary> The service whih this resource is belong to.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.AttachmentsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.AttachmentsResource.Get(System.String,System.String,System.String)">
+             <summary>Gets the specified message attachment.</summary>
+             <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+             user.</param>
+             <param name="messageId">The ID of the message containing the attachment.</param>
+            
+             <param name="id">The ID of the attachment.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.AttachmentsResource.GetRequest">
+            <summary>Gets the specified message attachment.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.AttachmentsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.AttachmentsResource.GetRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the
+            authenticated user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.AttachmentsResource.GetRequest.MessageId">
+            <summary>The ID of the message containing the attachment.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.AttachmentsResource.GetRequest.Id">
+            <summary>The ID of the attachment.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.AttachmentsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.AttachmentsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.AttachmentsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.AttachmentsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.Delete(System.String,System.String)">
+            <summary>Immediately and permanently deletes the specified message. This operation cannot be undone.
+            Prefer messages.trash instead.</summary>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">The ID of the message to delete.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.DeleteRequest">
+            <summary>Immediately and permanently deletes the specified message. This operation cannot be undone.
+            Prefer messages.trash instead.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.DeleteRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.DeleteRequest.Id">
+            <summary>The ID of the message to delete.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.Get(System.String,System.String)">
+            <summary>Gets the specified message.</summary>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">The ID of the message to retrieve.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.GetRequest">
+            <summary>Gets the specified message.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.GetRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.GetRequest.Id">
+            <summary>The ID of the message to retrieve.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.GetRequest.Format">
+            <summary>The format to return the message in.</summary>
+            [default: full]
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.GetRequest.FormatEnum">
+            <summary>The format to return the message in.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.Import(Google.Apis.Gmail.v1.Data.Message,System.String)">
+            <summary>Directly imports a message into only this user's mailbox, similar to receiving via SMTP. Does
+            not send a message.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportRequest">
+            <summary>Directly imports a message into only this user's mailbox, similar to receiving via SMTP. Does
+            not send a message.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Gmail.v1.Data.Message,System.String)">
+            <summary>Constructs a new Import request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportRequest.InitParameters">
+            <summary>Initializes Import parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.Import(Google.Apis.Gmail.v1.Data.Message,System.String,System.IO.Stream,System.String)">
+            <summary>Directly imports a message into only this user's mailbox, similar to receiving via SMTP. Does
+            not send a message.</summary>/// <param name="body">The body of the request.</param>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="stream">The stream to upload.</param>
+            <param name="contentType">The content type of the stream to upload.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportMediaUpload">
+            <summary>Import media upload which supports resumable upload.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportMediaUpload.Alt">
+            <summary>Data format for the response.</summary>
+            [default: json]
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportMediaUpload.AltEnum">
+            <summary>Data format for the response.</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportMediaUpload.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportMediaUpload.Fields">
+            <summary>Selector specifying which fields to include in a partial response.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportMediaUpload.Key">
+            <summary>API key. Your API key identifies your project and provides you with API access, quota, and
+            reports. Required unless you provide an OAuth 2.0 token.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportMediaUpload.OauthToken">
+            <summary>OAuth 2.0 token for the current user.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportMediaUpload.PrettyPrint">
+            <summary>Returns response with indentations and line breaks.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportMediaUpload.QuotaUser">
+            <summary>Available to use for quota purposes for server-side applications. Can be any arbitrary
+            string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are
+            provided.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportMediaUpload.UserIp">
+            <summary>IP address of the site where the request originates. Use this if you want to enforce per-
+            user limits.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportMediaUpload.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ImportMediaUpload.#ctor(Google.Apis.Services.IClientService,Google.Apis.Gmail.v1.Data.Message,System.String,System.IO.Stream,System.String)">
+            <summary>Constructs a new Import media upload instance.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.Insert(Google.Apis.Gmail.v1.Data.Message,System.String)">
+            <summary>Directly inserts a message into only this user's mailbox. Does not send a message.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertRequest">
+            <summary>Directly inserts a message into only this user's mailbox. Does not send a message.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Gmail.v1.Data.Message,System.String)">
+            <summary>Constructs a new Insert request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertRequest.InitParameters">
+            <summary>Initializes Insert parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.Insert(Google.Apis.Gmail.v1.Data.Message,System.String,System.IO.Stream,System.String)">
+            <summary>Directly inserts a message into only this user's mailbox. Does not send a message.</summary>/// <param name="body">The body of the request.</param>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="stream">The stream to upload.</param>
+            <param name="contentType">The content type of the stream to upload.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertMediaUpload">
+            <summary>Insert media upload which supports resumable upload.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertMediaUpload.Alt">
+            <summary>Data format for the response.</summary>
+            [default: json]
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertMediaUpload.AltEnum">
+            <summary>Data format for the response.</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertMediaUpload.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertMediaUpload.Fields">
+            <summary>Selector specifying which fields to include in a partial response.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertMediaUpload.Key">
+            <summary>API key. Your API key identifies your project and provides you with API access, quota, and
+            reports. Required unless you provide an OAuth 2.0 token.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertMediaUpload.OauthToken">
+            <summary>OAuth 2.0 token for the current user.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertMediaUpload.PrettyPrint">
+            <summary>Returns response with indentations and line breaks.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertMediaUpload.QuotaUser">
+            <summary>Available to use for quota purposes for server-side applications. Can be any arbitrary
+            string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are
+            provided.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertMediaUpload.UserIp">
+            <summary>IP address of the site where the request originates. Use this if you want to enforce per-
+            user limits.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertMediaUpload.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.InsertMediaUpload.#ctor(Google.Apis.Services.IClientService,Google.Apis.Gmail.v1.Data.Message,System.String,System.IO.Stream,System.String)">
+            <summary>Constructs a new Insert media upload instance.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.List(System.String)">
+            <summary>Lists the messages in the user's mailbox.</summary>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ListRequest">
+            <summary>Lists the messages in the user's mailbox.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ListRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ListRequest.MaxResults">
+            <summary>Maximum number of messages to return.</summary>
+            [default: 100]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ListRequest.Q">
+            <summary>Only return messages matching the specified query. Supports the same query format as the
+            Gmail search box. For example, "from:someuser@example.com rfc822msgid: is:unread".</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ListRequest.PageToken">
+            <summary>Page token to retrieve a specific page of results in the list.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ListRequest.IncludeSpamTrash">
+            <summary>Include messages from SPAM and TRASH in the results.</summary>
+            [default: false]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ListRequest.LabelIds">
+            <summary>Only return messages with labels that match all of the specified label IDs.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.Modify(Google.Apis.Gmail.v1.Data.ModifyMessageRequest,System.String,System.String)">
+            <summary>Modifies the labels on the specified message.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">The ID of the message to modify.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ModifyRequest">
+            <summary>Modifies the labels on the specified message.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ModifyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Gmail.v1.Data.ModifyMessageRequest,System.String,System.String)">
+            <summary>Constructs a new Modify request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ModifyRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ModifyRequest.Id">
+            <summary>The ID of the message to modify.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ModifyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ModifyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ModifyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ModifyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ModifyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.ModifyRequest.InitParameters">
+            <summary>Initializes Modify parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.Send(Google.Apis.Gmail.v1.Data.Message,System.String)">
+            <summary>Sends the specified message to the recipients in the To, Cc, and Bcc headers.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendRequest">
+            <summary>Sends the specified message to the recipients in the To, Cc, and Bcc headers.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Gmail.v1.Data.Message,System.String)">
+            <summary>Constructs a new Send request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendRequest.InitParameters">
+            <summary>Initializes Send parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.Send(Google.Apis.Gmail.v1.Data.Message,System.String,System.IO.Stream,System.String)">
+            <summary>Sends the specified message to the recipients in the To, Cc, and Bcc headers.</summary>/// <param name="body">The body of the request.</param>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="stream">The stream to upload.</param>
+            <param name="contentType">The content type of the stream to upload.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendMediaUpload">
+            <summary>Send media upload which supports resumable upload.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendMediaUpload.Alt">
+            <summary>Data format for the response.</summary>
+            [default: json]
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendMediaUpload.AltEnum">
+            <summary>Data format for the response.</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendMediaUpload.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendMediaUpload.Fields">
+            <summary>Selector specifying which fields to include in a partial response.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendMediaUpload.Key">
+            <summary>API key. Your API key identifies your project and provides you with API access, quota, and
+            reports. Required unless you provide an OAuth 2.0 token.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendMediaUpload.OauthToken">
+            <summary>OAuth 2.0 token for the current user.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendMediaUpload.PrettyPrint">
+            <summary>Returns response with indentations and line breaks.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendMediaUpload.QuotaUser">
+            <summary>Available to use for quota purposes for server-side applications. Can be any arbitrary
+            string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are
+            provided.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendMediaUpload.UserIp">
+            <summary>IP address of the site where the request originates. Use this if you want to enforce per-
+            user limits.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendMediaUpload.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.SendMediaUpload.#ctor(Google.Apis.Services.IClientService,Google.Apis.Gmail.v1.Data.Message,System.String,System.IO.Stream,System.String)">
+            <summary>Constructs a new Send media upload instance.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.Trash(System.String,System.String)">
+            <summary>Moves the specified message to the trash.</summary>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">The ID of the message to Trash.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.TrashRequest">
+            <summary>Moves the specified message to the trash.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.TrashRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Trash request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.TrashRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.TrashRequest.Id">
+            <summary>The ID of the message to Trash.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.TrashRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.TrashRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.TrashRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.TrashRequest.InitParameters">
+            <summary>Initializes Trash parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.Untrash(System.String,System.String)">
+            <summary>Removes the specified message from the trash.</summary>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">The ID of the message to remove from Trash.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.MessagesResource.UntrashRequest">
+            <summary>Removes the specified message from the trash.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.UntrashRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Untrash request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.UntrashRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.UntrashRequest.Id">
+            <summary>The ID of the message to remove from Trash.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.UntrashRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.UntrashRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.MessagesResource.UntrashRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.MessagesResource.UntrashRequest.InitParameters">
+            <summary>Initializes Untrash parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.Threads">
+            <summary>Gets the Threads resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.ThreadsResource">
+            <summary>The "threads" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.service">
+            <summary> The service whih this resource is belong to.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.Delete(System.String,System.String)">
+            <summary>Immediately and permanently deletes the specified thread. This operation cannot be undone.
+            Prefer threads.trash instead.</summary>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">ID of the Thread to delete.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.DeleteRequest">
+            <summary>Immediately and permanently deletes the specified thread. This operation cannot be undone.
+            Prefer threads.trash instead.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.DeleteRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.DeleteRequest.Id">
+            <summary>ID of the Thread to delete.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.Get(System.String,System.String)">
+            <summary>Gets the specified thread.</summary>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">The ID of the thread to retrieve.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.GetRequest">
+            <summary>Gets the specified thread.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.GetRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.GetRequest.Id">
+            <summary>The ID of the thread to retrieve.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.List(System.String)">
+            <summary>Lists the threads in the user's mailbox.</summary>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ListRequest">
+            <summary>Lists the threads in the user's mailbox.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ListRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ListRequest.MaxResults">
+            <summary>Maximum number of threads to return.</summary>
+            [default: 100]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ListRequest.Q">
+            <summary>Only return threads matching the specified query. Supports the same query format as the
+            Gmail search box. For example, "from:someuser@example.com rfc822msgid: is:unread".</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ListRequest.PageToken">
+            <summary>Page token to retrieve a specific page of results in the list.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ListRequest.IncludeSpamTrash">
+            <summary>Include threads from SPAM and TRASH in the results.</summary>
+            [default: false]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ListRequest.LabelIds">
+            <summary>Only return threads with labels that match all of the specified label IDs.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.Modify(Google.Apis.Gmail.v1.Data.ModifyThreadRequest,System.String,System.String)">
+            <summary>Modifies the labels applied to the thread. This applies to all messages in the
+            thread.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">The ID of the thread to modify.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ModifyRequest">
+            <summary>Modifies the labels applied to the thread. This applies to all messages in the
+            thread.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ModifyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Gmail.v1.Data.ModifyThreadRequest,System.String,System.String)">
+            <summary>Constructs a new Modify request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ModifyRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ModifyRequest.Id">
+            <summary>The ID of the thread to modify.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ModifyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ModifyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ModifyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ModifyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ModifyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.ModifyRequest.InitParameters">
+            <summary>Initializes Modify parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.Trash(System.String,System.String)">
+            <summary>Moves the specified thread to the trash.</summary>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">The ID of the thread to Trash.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.TrashRequest">
+            <summary>Moves the specified thread to the trash.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.TrashRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Trash request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.TrashRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.TrashRequest.Id">
+            <summary>The ID of the thread to Trash.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.TrashRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.TrashRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.TrashRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.TrashRequest.InitParameters">
+            <summary>Initializes Trash parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.Untrash(System.String,System.String)">
+            <summary>Removes the specified thread from the trash.</summary>
+            <param name="userId">The user's email address. The special value me can be used to indicate the authenticated
+            user.</param>
+            <param name="id">The ID of the thread to remove from Trash.</param>
+        </member>
+        <member name="T:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.UntrashRequest">
+            <summary>Removes the specified thread from the trash.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.UntrashRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Untrash request.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.UntrashRequest.UserId">
+            <summary>The user's email address. The special value me can be used to indicate the authenticated
+            user.</summary>
+            [default: me]
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.UntrashRequest.Id">
+            <summary>The ID of the thread to remove from Trash.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.UntrashRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.UntrashRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.UntrashRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Gmail.v1.UsersResource.ThreadsResource.UntrashRequest.InitParameters">
+            <summary>Initializes Untrash parameter list.</summary>
+        </member>
+    </members>
+</doc>
